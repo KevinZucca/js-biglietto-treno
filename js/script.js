@@ -22,13 +22,13 @@ document.writeln("Viaggerai per " + kilometerUser + "km");
 document.writeln("Hai " + ageUser + " anni");
 
 if (ageUser < 18) {
-    let sale = ticketPrice * 0.20;
-    userPrice = ticketPrice - sale;
+    let discount = ticketPrice * 0.20;
+    userPrice = ticketPrice - discount;
     userPrice = userPrice.toFixed(2);
     document.writeln("Il prezzo del tuo biglietto è: " + userPrice + "€")
-} else if (ageUser > 65)  {
-    let sale = ticketPrice * 0.40;
-    userPrice = ticketPrice - sale;
+} else if (ageUser >= 65)  {
+    let discount = ticketPrice * 0.40;
+    userPrice = ticketPrice - discount;
     userPrice = userPrice.toFixed(2);
     document.writeln("Il prezzo del tuo biglietto è: " + userPrice + "€")
 } else {
