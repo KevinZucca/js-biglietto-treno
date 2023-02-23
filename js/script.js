@@ -18,22 +18,24 @@ let kilometerUser = parseInt(prompt("Quanti km vuoi percorrere?"));
 let ageUser = parseInt(prompt("Quanti anni hai?"));
 let ticketPrice = 0.21 * kilometerUser;
 
-console.log("Viaggerai per " + kilometerUser + "km");
-console.log("Hai " + ageUser + " anni");
+document.writeln("Viaggerai per " + kilometerUser + "km");
+document.writeln("Hai " + ageUser + " anni");
 
-if (ageUser <= 18) {
+if (ageUser < 18) {
     let sale = ticketPrice * 0.20;
     userPrice = ticketPrice - sale;
     userPrice = userPrice.toFixed(2);
-    console.log("Il prezzo del tuo biglietto è: " + userPrice + "€")
-} else if (ageUser >= 65)  {
+    document.writeln("Il prezzo del tuo biglietto è: " + userPrice + "€")
+} else if (ageUser > 65)  {
     let sale = ticketPrice * 0.40;
     userPrice = ticketPrice - sale;
     userPrice = userPrice.toFixed(2);
-    console.log("Il prezzo del tuo biglietto è: " + userPrice + "€")
+    document.writeln("Il prezzo del tuo biglietto è: " + userPrice + "€")
 } else {
-    console.log("Il prezzo del tuo biglietto è: " + ticketPrice + "€")
+    document.writeln("Il prezzo del tuo biglietto è: " + ticketPrice + "€")
 }
+
+
 
 
 
